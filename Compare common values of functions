@@ -1,0 +1,24 @@
+'this function is to compare any two functions and see which values they have in common'
+
+def f1(x):
+     if (x > 0):
+         x = 3*x
+         x = x / 2
+     return x
+
+def f2(x):
+     if (x > 0):
+         x = 3*x
+     x = x / 2
+     return x
+
+f1list =[]
+f2list=[]
+for i in range(-10,10,1):
+     f1list.append(f1(i))
+     f2list.append(f2(i))
+
+#f1list
+#f2list
+
+set(f1list) & set (f2list)
